@@ -1,0 +1,15 @@
+.rangeker-1 > div:first-child {
+    display: none !important;
+}
+
+.MuiPickersLayout-contentWrapper .MuiDateRangeCalendar-root >  div:first-of-type {
+    display: none !important;
+}
+
+.wrap-stage {
+    width: 100%;
+}
+
+.wrap-stage-parent {
+    width: 100%;
+}

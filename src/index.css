@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.c-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ant-picker-dropdown {
+  z-index: 999999 !important;
+}

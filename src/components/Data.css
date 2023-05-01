@@ -1,0 +1,17 @@
+.input-group{
+    margin-left: 20px;
+    flex:10;
+    align-items: center;
+}
+.input-group > span{
+    margin-right: 10px;
+}
+.form-input{
+    margin-top: 20px;
+    display: flex;
+}
+
+.form-input > button {
+    margin-left: 20px;
+    flex: 2;
+}
