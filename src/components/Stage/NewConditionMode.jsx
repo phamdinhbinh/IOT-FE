@@ -32,9 +32,6 @@ export default function NewConditionMode(props) {
     setOpen(false);
   };
   const clearWhenComplete= ()=> {
-    setDevice("")
-    setStartPoint(0)
-    setEndPoint(0)
   }
 
   return (
