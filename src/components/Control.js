@@ -12,7 +12,7 @@ var options = {
     clientId: "mqttjs_" + Math.random().toString(16).substr(2, 8),
 };
 
-var host = "//broker.mqttdashboard.com:8000/mqtt";
+var host = "mqtt://broker.mqttdashboard.com:8000/mqtt";
 
 const Control = () => {
 
