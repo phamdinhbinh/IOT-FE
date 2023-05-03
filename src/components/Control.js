@@ -5,7 +5,7 @@ import mqtt from "precompiled-mqtt";
 
 
 var options = {
-    protocol: "ws",
+    protocol: "wss",
     username: "",
     password: "",
     keepalive: 2000,
