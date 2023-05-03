@@ -143,6 +143,9 @@ function AddStageItem(props) {
   const [state, setState] = React.useState(0);
   const [stageId, setStageId] = React.useState(props?.stage_id);
   const [open, setOpen] = React.useState(false)
+  React.useEffect(()=> {
+    setStageId(props?.stage_id)
+  }, [props?.stage_id])
   const handleClick= () => {
     setOpen(true)
   }
@@ -227,14 +230,13 @@ function AddStageItem(props) {
 
 
         <DialogActions>
-          <Button onClick={()=> props?.handleClose()}>Đóng</Button>
+          <Button onClick={()=> handleClose()}>Đóng</Button>
           <Button onClick={async ()=> { 
             const result= await add_stage_item(device, mode, startPoint, endPoint, state, timeStart, timeEnd, stageId, date)
             if(result?.add=== true) {
               handleClose()
               props?.setChange2(prev=> !prev)
             }
-            props?.handleClose()
           }}>Tạo</Button>
         </DialogActions>
       </Dialog>

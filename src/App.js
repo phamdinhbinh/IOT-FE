@@ -4,12 +4,19 @@ import Control from './components/Control';
 import Data from './components/Data';
 import DataChart from './components/DataChart';
 import Stage from './components/Stage';
-
+import logodhqg from './img/1200px-Logo_HUET.svg.png'
+import logocnnn from './img/khoa cnnn.jpg'
 function App() {
   return (
     <div className="container">
-      <header>
-        <span>Vườn thông minh</span>
+      <header className='header d-flex '>
+     
+        <img src={logodhqg} alt="My Image" />
+      
+        <span className="text-uppercase">Garden Monitoring System</span>
+      
+        <img src={logocnnn} alt="My Image" />
+      
       </header>
       <main>
         <div>

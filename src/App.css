@@ -1,10 +1,18 @@
 header{
-    /* background-color: brown; */
+    color: #00be06;
     text-align: center;
     font-size: 2.5rem;
     font-weight: bold;
+    height: 120px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
-
+.header img {
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+  }
 .nav-link{
     font-weight: bold;
 }

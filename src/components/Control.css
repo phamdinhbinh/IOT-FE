@@ -18,7 +18,7 @@
 .cart{
     display: flex;
     flex-direction: column;
-    background-color: #ddd;
+    background-color: #e7f9fc;
     width: 20%;
     height: 150px;
     border-radius: 10px;
@@ -44,4 +44,39 @@
 .button-group>button{
     width: 45%;
     height: 60px;
+}
+
+.btn-on {
+    background-color: #198754;
+    color: #fff;
+  }
+  
+  .btn-off {
+    background-color: #dc3545;
+    color: #fff;
+  }
+ 
+  .btn-on:hover {
+    background-color: #065c34;
+    color: #fff;
+  }
+  
+  .btn-off:hover {
+    background-color: #b41c2b;
+    color: #fff;
+  }
+  .set{
+    background-color: rgb(38, 97, 206);
+  }
+  .set:hover{
+    background-color: rgb(13, 50, 119);
+  }
+.mode{
+    display: flex;
+    flex-direction: column;
+    background-color: #e7f9fc;
+    width: 30%;
+    height: 150px;
+    border-radius: 10px;
+    padding: 10px;
 }

@@ -20,6 +20,7 @@
     "dayjs": "^1.11.7",
     "moment": "^2.29.4",
     "mqtt": "^4.3.7",
+    "precompiled-mqtt": "^4.3.14-beta",
     "process": "^0.11.10",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
