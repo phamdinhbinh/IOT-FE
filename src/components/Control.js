@@ -5,14 +5,14 @@ import mqtt from "precompiled-mqtt";
 
 
 var options = {
-    protocol: "wss",
+    protocol: "ws",
     username: "",
     password: "",
     keepalive: 2000,
     clientId: "mqttjs_" + Math.random().toString(16).substr(2, 8),
 };
 
-var host = "broker.emqx.io:8083/mqtt";
+var host = "mqtt://broker.hivemq.com:8000/mqtt";
 
 const Control = () => {
 
