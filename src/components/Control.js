@@ -5,14 +5,14 @@ import mqtt from "precompiled-mqtt";
 
 
 var options = {
-    protocol: "wss",
+    protocol: "ws",
     username: "",
     password: "",
     keepalive: 2000,
     clientId: "mqttjs_" + Math.random().toString(16).substr(2, 8),
 };
 
-var host = "wss://broker.hivemq.com:8000/mqtt";
+var host = "mqtt://broker.hivemq.com:8000/mqtt";
 
 const Control = () => {
 
@@ -62,6 +62,7 @@ const Control = () => {
             });
             client.on('message', (topic, message) => {
                 const payload = { topic, message: message.toString() };
+                // console.log(payload);
                 onMessage(payload);
             });
         }
@@ -83,6 +84,7 @@ const Control = () => {
 
     function onMessage(payload) {
         if (payload.topic === 'esp8266-master/pub') {
+          try {
             let messageJson = JSON.parse(payload.message);
             if (messageJson) {
                 if (messageJson.relay_1 === 1) {
@@ -121,9 +123,12 @@ const Control = () => {
                 setSoilMoisture(messageJson.soil_moisture);
                 setLightSensor(messageJson.light);
             }
+          } catch (error) {
+            console.error('Invalid JSON:', error);
+          }
         }
-    }
-
+      }
+      
     return (
         <div className='control-tab'>
             <div className='control-tab-row'>
@@ -181,7 +186,7 @@ const Control = () => {
                 </div>
             </div>
             <div className='control-tab-row'>
-            <div className=' mode container-fluid'>
+            <div className=' mode cart container-fluid'>
                 <span className='cart-title d-flex justify-content-center fw-bolder'>Mode: {stateMode}</span>
                 <div className='button-group row'>
                     <div className='col'>

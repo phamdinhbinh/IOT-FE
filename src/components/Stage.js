@@ -227,8 +227,6 @@ function AddStageItem(props) {
           }} />
         </DialogContent>
 
-
-
         <DialogActions>
           <Button onClick={()=> handleClose()}>Đóng</Button>
           <Button onClick={async ()=> { 

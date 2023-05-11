@@ -16,3 +16,14 @@ header{
 .nav-link{
     font-weight: bold;
 }
+
+@media only screen and (max-width: 400px) {
+    .header img{
+        height: 50%;
+        max-width: 50%;
+    }
+
+    .header span{
+        font-size: 1.2rem;
+    }
+  }

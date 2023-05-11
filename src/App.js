@@ -6,17 +6,20 @@ import DataChart from './components/DataChart';
 import Stage from './components/Stage';
 import logodhqg from './img/1200px-Logo_HUET.svg.png'
 import logocnnn from './img/khoa cnnn.jpg'
+import logo from './img/logo-dai-hoc-quoc-gia-ha-noi-inkythuatso-01-23-15-44-39.jpg'
+import logofet from './img/logo khoa điện tử viễn thông.png'
 function App() {
   return (
-    <div className="container">
+    <div className="container my-2">
       <header className='header d-flex '>
-     
+        <img src={logo} alt="My Image" />
         <img src={logodhqg} alt="My Image" />
       
         <span className="text-uppercase">Garden Monitoring System</span>
       
+        <img src={logofet} alt="My Image" />
         <img src={logocnnn} alt="My Image" />
-      
+       
       </header>
       <main>
         <div>

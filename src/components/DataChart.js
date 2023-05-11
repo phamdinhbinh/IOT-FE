@@ -26,7 +26,7 @@ ChartJS.register(
 const DataChart = () => {
 
     const optionsChart = {
-        responsive: true,
+        responsive: false,
         plugins: {
             legend: {
                 position: 'top',
@@ -198,10 +198,14 @@ const DataChart = () => {
                 </div>
                 <button className="btn btn-outline-secondary" type="button" id="button-addon2" onClick={filterClick}>Tìm kiếm</button>
             </div>
+            <div style={{width:'100%', overflowX: 'scroll'}}>
             <Line
                 options={optionsChart}
                 data={dataChart}
+                width={1000}
+                height={400}
             />
+            </div>
         </div>
     )
 }

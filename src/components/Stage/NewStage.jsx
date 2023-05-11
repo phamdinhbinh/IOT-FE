@@ -140,8 +140,10 @@ export default function NewStage(props) {
             if(result1?.add=== true) {
               Array.from(Array(moment(value?.[1]?.format("DD/MM/YYYY"), "DD/MM/YYYY").diff(moment(value?.[0]?.format("DD/MM/YYYY"), "DD/MM/YYYY"), "days") + 1).keys())?.map((item1, key1)=> 
                 {
-                  console.log(key1)
-                  const promises= stage?.map((item, key)=> axios.post(API_URL+ "/api/add-stage/item", {device: item?.device, mode: item?.mode, state: item?.state=== true ? 1 : 0, startPoint: item?.startPoint, endPoint: item?.endPoint, timeStart: item?.time?.timeStart, timeEnd: item?.time?.timeEnd, stage_id: result1?.stage_id, date: moment(value?.[1]?.format("DD/MM/YYYY"), "DD/MM/YYYY").subtract(parseInt(key1), "days").format("DD/MM/YYYY")}))
+                  console.log('key', key1)
+                  console.log('ngày', moment(value?.[1]?.format("DD/MM/YYYY"), "DD/MM/YYYY").subtract(parseInt(key1), "days").format("DD/MM/YYYY"))
+                  const promises= stage?.map((item, key)=> axios.post(API_URL+ "/api/add-stage/item", {device: item?.device, mode: item?.mode, state: item?.state=== true ? 1 : 0, startPoint: item?.startPoint, endPoint: item?.endPoint, timeStart: item?.time?.timeStart, timeEnd: item?.time?.timeEnd, stage_id: result1?.stage_id, 
+                    date: moment(value?.[1]?.format("DD/MM/YYYY"), "DD/MM/YYYY").subtract(parseInt(key1), "days").format("DD/MM/YYYY")}))
                 Promise.all(promises)
                 .then(responses => {
                   console.log(responses);

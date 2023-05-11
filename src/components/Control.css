@@ -19,7 +19,7 @@
     display: flex;
     flex-direction: column;
     background-color: #e7f9fc;
-    width: 20%;
+    width: 22%;
     height: 150px;
     border-radius: 10px;
     padding: 10px;
@@ -79,4 +79,17 @@
     height: 150px;
     border-radius: 10px;
     padding: 10px;
+}
+
+@media only screen and (max-width: 400px) {
+  .control-tab-row{
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .cart{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
 }
